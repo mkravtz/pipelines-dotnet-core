@@ -31,3 +31,10 @@ steps:
   inputs:
     version: '2.2.x'
     packageType: runtime
+# Build it
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: build
+    projects: '**/*.csproj'
+    arguments: '--configuration Release' # Update this to match your need
